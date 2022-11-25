@@ -23,12 +23,8 @@ public class CatTest {
     }
 
     @Test
-    public void checkThatCatMeow(){
+    public void checkThatCatMeow() {
         Cat cat = new Cat(feline);
         Assert.assertTrue("Cat doesn't meow", expectedSound.contains(cat.getSound()));
     }
-
-
-
-
 }

@@ -7,7 +7,6 @@ import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class FelineKittensTest {
     Feline feline = new Feline();
-
     private final int firstNumber;
     private final int secondNumber;
 
@@ -16,9 +15,9 @@ public class FelineKittensTest {
         this.secondNumber = secondNumber;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Kittens in parameter = {0}. Returned kittens = {1}")
     public static Object[][] getData() {
-        return new Object[][] {
+        return new Object[][]{
                 {0, 0},
                 {1, 1},
                 {-1, -1},
@@ -26,7 +25,7 @@ public class FelineKittensTest {
     }
 
     @Test
-    public void checkKittens(){
-        Assert.assertTrue(feline.getKittens(firstNumber) == secondNumber);
+    public void checkKittens() {
+        Assert.assertEquals(feline.getKittens(firstNumber), secondNumber);
     }
 }

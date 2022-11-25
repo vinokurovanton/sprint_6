@@ -17,10 +17,9 @@ public class LionAlexTest {
 
     String expectedPlace = "Нью-Йоркский зоопарк";
     List<String> expectedFriends = List.of("Марти", "Глория", "Мелман");
-    List<String> expectedFood= List.of("Марти", "Глория", "Мелман");
+    List<String> expectedFood = List.of("Марти", "Глория", "Мелман");
     @Mock
     Feline feline;
-
 
     public LionAlexTest() throws Exception {
     }
@@ -52,6 +51,6 @@ public class LionAlexTest {
     @Test
     public void checkThatAlexDoNotHaveKittens() throws Exception {
         LionAlex alex = new LionAlex(feline);
-        Assert.assertTrue(alex.getKittens() ==0);
+        Assert.assertTrue(alex.getKittens() == 0);
     }
 }

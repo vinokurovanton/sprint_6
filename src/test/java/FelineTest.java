@@ -7,8 +7,7 @@ import java.util.Objects;
 
 public class FelineTest {
     Feline feline = new Feline();
-
-    List <String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+    List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
     String expectedFamily = "Кошачьи";
     int expectedKitten = 1;
 
@@ -23,8 +22,7 @@ public class FelineTest {
     }
 
     @Test
-    public void checkKittens(){
+    public void checkKittens() {
         Assert.assertTrue(feline.getKittens() == expectedKitten);
     }
-
 }

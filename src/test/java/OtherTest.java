@@ -33,7 +33,7 @@ public class OtherTest {
     public void getExceptionIfIncorrectSex() throws Exception {
         try {
             Lion lion = new Lion(feline, "Самица");
-        } catch (Exception e){
+        } catch (Exception e) {
             Assert.assertTrue("Exception doesn't show", e.getMessage().contains(expectedException));
         }
     }
@@ -62,7 +62,7 @@ public class OtherTest {
         Animal belka = new Animal();
         try {
             Assert.assertTrue(Objects.equals(belka.getFood("Инопланетное"), foodGreen));
-        } catch (Exception e){
+        } catch (Exception e) {
             Assert.assertTrue("Exception doesn't show", e.getMessage().contains(expectedExceptionFood));
         }
     }
